@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4E0762AD1EB4E97400D646FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0762AC1EB4E97400D646FE /* AppDelegate.swift */; };
+		4E0762AF1EB4E97400D646FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0762AE1EB4E97400D646FE /* ViewController.swift */; };
+		4E0762B11EB4E97400D646FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E0762B01EB4E97400D646FE /* Assets.xcassets */; };
+		4E0762B41EB4E97500D646FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E0762B21EB4E97500D646FE /* Main.storyboard */; };
+		4E0762BE1EB4EBFF00D646FE /* ComplexNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0762BD1EB4EBFF00D646FE /* ComplexNumber.swift */; };
+		4E0762C01EB4ED1800D646FE /* MandelbrotSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0762BF1EB4ED1800D646FE /* MandelbrotSet.swift */; };
+		4E0762C21EB4F35200D646FE /* MandelbrotSetPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0762C11EB4F35200D646FE /* MandelbrotSetPoint.swift */; };
+		4E0762C41EB4F8BD00D646FE /* Transformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0762C31EB4F8BD00D646FE /* Transformation.swift */; };
+		4E0762C61EB4F91800D646FE /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0762C51EB4F91800D646FE /* Rectangle.swift */; };
+		4E0762CE1EB4FDC800D646FE /* MandelbrotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0762CD1EB4FDC800D646FE /* MandelbrotTests.swift */; };
+		4E0762D61EB4FDDC00D646FE /* LinearTransformationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0762D51EB4FDDC00D646FE /* LinearTransformationTests.swift */; };
+		4E0762D81EB504C600D646FE /* MandelbrotSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0762D71EB504C600D646FE /* MandelbrotSetTests.swift */; };
+		4E0762DC1EB508B700D646FE /* ColourMapProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0762DB1EB508B700D646FE /* ColourMapProtocol.swift */; };
+		4E0762DE1EB5098300D646FE /* GreyScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0762DD1EB5098300D646FE /* GreyScale.swift */; };
+		4E0762E01EB50C8900D646FE /* YellowScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0762DF1EB50C8900D646FE /* YellowScale.swift */; };
+		4E1E4ACE1EBA807A00ADB241 /* Pixel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1E4ACD1EBA807A00ADB241 /* Pixel.swift */; };
+		4E1E4AD01EBA982400ADB241 /* MandelbrotSetConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1E4ACF1EBA982400ADB241 /* MandelbrotSetConfig.swift */; };
+		4EA8555D1EB9368A00D76D3D /* SmoothScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA8555C1EB9368A00D76D3D /* SmoothScale.swift */; };
+		4EC376DF1EBE342C00106B21 /* ManyColourGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC376DE1EBE342C00106B21 /* ManyColourGradient.swift */; };
+		4EC9EBAB1EBBF57400AA333E /* NSPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC9EBAA1EBBF57400AA333E /* NSPoint+Extension.swift */; };
+		4EC9EBAE1EBBF66F00AA333E /* NSImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC9EBAD1EBBF66F00AA333E /* NSImage+Extension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4E0762D01EB4FDC800D646FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E0762A11EB4E97400D646FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E0762A81EB4E97400D646FE;
+			remoteInfo = Mandelbrot;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4E0762A91EB4E97400D646FE /* Mandelbrot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mandelbrot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E0762AC1EB4E97400D646FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4E0762AE1EB4E97400D646FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4E0762B01EB4E97400D646FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4E0762B31EB4E97500D646FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4E0762B51EB4E97500D646FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E0762BD1EB4EBFF00D646FE /* ComplexNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplexNumber.swift; sourceTree = "<group>"; };
+		4E0762BF1EB4ED1800D646FE /* MandelbrotSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MandelbrotSet.swift; sourceTree = "<group>"; };
+		4E0762C11EB4F35200D646FE /* MandelbrotSetPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MandelbrotSetPoint.swift; sourceTree = "<group>"; };
+		4E0762C31EB4F8BD00D646FE /* Transformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transformation.swift; sourceTree = "<group>"; };
+		4E0762C51EB4F91800D646FE /* Rectangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
+		4E0762CB1EB4FDC800D646FE /* MandelbrotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MandelbrotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E0762CD1EB4FDC800D646FE /* MandelbrotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MandelbrotTests.swift; sourceTree = "<group>"; };
+		4E0762CF1EB4FDC800D646FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E0762D51EB4FDDC00D646FE /* LinearTransformationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearTransformationTests.swift; sourceTree = "<group>"; };
+		4E0762D71EB504C600D646FE /* MandelbrotSetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MandelbrotSetTests.swift; sourceTree = "<group>"; };
+		4E0762DB1EB508B700D646FE /* ColourMapProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourMapProtocol.swift; sourceTree = "<group>"; };
+		4E0762DD1EB5098300D646FE /* GreyScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreyScale.swift; sourceTree = "<group>"; };
+		4E0762DF1EB50C8900D646FE /* YellowScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YellowScale.swift; sourceTree = "<group>"; };
+		4E1E4ACD1EBA807A00ADB241 /* Pixel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pixel.swift; sourceTree = "<group>"; };
+		4E1E4ACF1EBA982400ADB241 /* MandelbrotSetConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MandelbrotSetConfig.swift; sourceTree = "<group>"; };
+		4EA8555C1EB9368A00D76D3D /* SmoothScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmoothScale.swift; sourceTree = "<group>"; };
+		4EC376DE1EBE342C00106B21 /* ManyColourGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManyColourGradient.swift; sourceTree = "<group>"; };
+		4EC9EBAA1EBBF57400AA333E /* NSPoint+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSPoint+Extension.swift"; sourceTree = "<group>"; };
+		4EC9EBAD1EBBF66F00AA333E /* NSImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImage+Extension.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4E0762A61EB4E97400D646FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E0762C81EB4FDC800D646FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4E0762A01EB4E97400D646FE = {
+			isa = PBXGroup;
+			children = (
+				4E0762AB1EB4E97400D646FE /* Mandelbrot */,
+				4E0762CC1EB4FDC800D646FE /* MandelbrotTests */,
+				4E0762AA1EB4E97400D646FE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4E0762AA1EB4E97400D646FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4E0762A91EB4E97400D646FE /* Mandelbrot.app */,
+				4E0762CB1EB4FDC800D646FE /* MandelbrotTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4E0762AB1EB4E97400D646FE /* Mandelbrot */ = {
+			isa = PBXGroup;
+			children = (
+				4EC9EBAC1EBBF5CC00AA333E /* Extensions */,
+				4E0762DA1EB5088300D646FE /* Model */,
+				4E0762D91EB5086A00D646FE /* ColourMaps */,
+				4E0762AC1EB4E97400D646FE /* AppDelegate.swift */,
+				4E0762AE1EB4E97400D646FE /* ViewController.swift */,
+				4E0762B01EB4E97400D646FE /* Assets.xcassets */,
+				4E0762B21EB4E97500D646FE /* Main.storyboard */,
+				4E0762B51EB4E97500D646FE /* Info.plist */,
+			);
+			path = Mandelbrot;
+			sourceTree = "<group>";
+		};
+		4E0762CC1EB4FDC800D646FE /* MandelbrotTests */ = {
+			isa = PBXGroup;
+			children = (
+				4E0762CD1EB4FDC800D646FE /* MandelbrotTests.swift */,
+				4E0762CF1EB4FDC800D646FE /* Info.plist */,
+				4E0762D51EB4FDDC00D646FE /* LinearTransformationTests.swift */,
+				4E0762D71EB504C600D646FE /* MandelbrotSetTests.swift */,
+			);
+			path = MandelbrotTests;
+			sourceTree = "<group>";
+		};
+		4E0762D91EB5086A00D646FE /* ColourMaps */ = {
+			isa = PBXGroup;
+			children = (
+				4E0762DB1EB508B700D646FE /* ColourMapProtocol.swift */,
+				4E0762DD1EB5098300D646FE /* GreyScale.swift */,
+				4E0762DF1EB50C8900D646FE /* YellowScale.swift */,
+				4EA8555C1EB9368A00D76D3D /* SmoothScale.swift */,
+				4EC376DE1EBE342C00106B21 /* ManyColourGradient.swift */,
+			);
+			path = ColourMaps;
+			sourceTree = "<group>";
+		};
+		4E0762DA1EB5088300D646FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E0762BD1EB4EBFF00D646FE /* ComplexNumber.swift */,
+				4E0762BF1EB4ED1800D646FE /* MandelbrotSet.swift */,
+				4E1E4ACF1EBA982400ADB241 /* MandelbrotSetConfig.swift */,
+				4E0762C11EB4F35200D646FE /* MandelbrotSetPoint.swift */,
+				4E0762C31EB4F8BD00D646FE /* Transformation.swift */,
+				4E0762C51EB4F91800D646FE /* Rectangle.swift */,
+				4E1E4ACD1EBA807A00ADB241 /* Pixel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4EC9EBAC1EBBF5CC00AA333E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4EC9EBAA1EBBF57400AA333E /* NSPoint+Extension.swift */,
+				4EC9EBAD1EBBF66F00AA333E /* NSImage+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4E0762A81EB4E97400D646FE /* Mandelbrot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E0762B81EB4E97500D646FE /* Build configuration list for PBXNativeTarget "Mandelbrot" */;
+			buildPhases = (
+				4E0762A51EB4E97400D646FE /* Sources */,
+				4E0762A61EB4E97400D646FE /* Frameworks */,
+				4E0762A71EB4E97400D646FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mandelbrot;
+			productName = Mandelbrot;
+			productReference = 4E0762A91EB4E97400D646FE /* Mandelbrot.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4E0762CA1EB4FDC800D646FE /* MandelbrotTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E0762D21EB4FDC800D646FE /* Build configuration list for PBXNativeTarget "MandelbrotTests" */;
+			buildPhases = (
+				4E0762C71EB4FDC800D646FE /* Sources */,
+				4E0762C81EB4FDC800D646FE /* Frameworks */,
+				4E0762C91EB4FDC800D646FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4E0762D11EB4FDC800D646FE /* PBXTargetDependency */,
+			);
+			name = MandelbrotTests;
+			productName = MandelbrotTests;
+			productReference = 4E0762CB1EB4FDC800D646FE /* MandelbrotTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4E0762A11EB4E97400D646FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Gary Kerr";
+				TargetAttributes = {
+					4E0762A81EB4E97400D646FE = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = T59AZ797LW;
+						ProvisioningStyle = Automatic;
+					};
+					4E0762CA1EB4FDC800D646FE = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = T59AZ797LW;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4E0762A81EB4E97400D646FE;
+					};
+				};
+			};
+			buildConfigurationList = 4E0762A41EB4E97400D646FE /* Build configuration list for PBXProject "Mandelbrot" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4E0762A01EB4E97400D646FE;
+			productRefGroup = 4E0762AA1EB4E97400D646FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4E0762A81EB4E97400D646FE /* Mandelbrot */,
+				4E0762CA1EB4FDC800D646FE /* MandelbrotTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4E0762A71EB4E97400D646FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E0762B11EB4E97400D646FE /* Assets.xcassets in Resources */,
+				4E0762B41EB4E97500D646FE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E0762C91EB4FDC800D646FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4E0762A51EB4E97400D646FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EC376DF1EBE342C00106B21 /* ManyColourGradient.swift in Sources */,
+				4E0762AF1EB4E97400D646FE /* ViewController.swift in Sources */,
+				4E0762DE1EB5098300D646FE /* GreyScale.swift in Sources */,
+				4EC9EBAE1EBBF66F00AA333E /* NSImage+Extension.swift in Sources */,
+				4E1E4AD01EBA982400ADB241 /* MandelbrotSetConfig.swift in Sources */,
+				4E0762C41EB4F8BD00D646FE /* Transformation.swift in Sources */,
+				4E1E4ACE1EBA807A00ADB241 /* Pixel.swift in Sources */,
+				4E0762C01EB4ED1800D646FE /* MandelbrotSet.swift in Sources */,
+				4E0762AD1EB4E97400D646FE /* AppDelegate.swift in Sources */,
+				4E0762E01EB50C8900D646FE /* YellowScale.swift in Sources */,
+				4E0762DC1EB508B700D646FE /* ColourMapProtocol.swift in Sources */,
+				4E0762BE1EB4EBFF00D646FE /* ComplexNumber.swift in Sources */,
+				4EC9EBAB1EBBF57400AA333E /* NSPoint+Extension.swift in Sources */,
+				4E0762C21EB4F35200D646FE /* MandelbrotSetPoint.swift in Sources */,
+				4EA8555D1EB9368A00D76D3D /* SmoothScale.swift in Sources */,
+				4E0762C61EB4F91800D646FE /* Rectangle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E0762C71EB4FDC800D646FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E0762D81EB504C600D646FE /* MandelbrotSetTests.swift in Sources */,
+				4E0762CE1EB4FDC800D646FE /* MandelbrotTests.swift in Sources */,
+				4E0762D61EB4FDDC00D646FE /* LinearTransformationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4E0762D11EB4FDC800D646FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E0762A81EB4E97400D646FE /* Mandelbrot */;
+			targetProxy = 4E0762D01EB4FDC800D646FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4E0762B21EB4E97500D646FE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4E0762B31EB4E97500D646FE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4E0762B61EB4E97500D646FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4E0762B71EB4E97500D646FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		4E0762B91EB4E97500D646FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = T59AZ797LW;
+				INFOPLIST_FILE = Mandelbrot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.preludeandfugue.Mandelbrot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		4E0762BA1EB4E97500D646FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = T59AZ797LW;
+				INFOPLIST_FILE = Mandelbrot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.preludeandfugue.Mandelbrot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		4E0762D31EB4FDC800D646FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = T59AZ797LW;
+				INFOPLIST_FILE = MandelbrotTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.preludeandfugue.MandelbrotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mandelbrot.app/Contents/MacOS/Mandelbrot";
+			};
+			name = Debug;
+		};
+		4E0762D41EB4FDC800D646FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = T59AZ797LW;
+				INFOPLIST_FILE = MandelbrotTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.preludeandfugue.MandelbrotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mandelbrot.app/Contents/MacOS/Mandelbrot";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4E0762A41EB4E97400D646FE /* Build configuration list for PBXProject "Mandelbrot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E0762B61EB4E97500D646FE /* Debug */,
+				4E0762B71EB4E97500D646FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E0762B81EB4E97500D646FE /* Build configuration list for PBXNativeTarget "Mandelbrot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E0762B91EB4E97500D646FE /* Debug */,
+				4E0762BA1EB4E97500D646FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E0762D21EB4FDC800D646FE /* Build configuration list for PBXNativeTarget "MandelbrotTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E0762D31EB4FDC800D646FE /* Debug */,
+				4E0762D41EB4FDC800D646FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4E0762A11EB4E97400D646FE /* Project object */;
+}

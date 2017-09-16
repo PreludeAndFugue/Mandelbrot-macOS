@@ -43,11 +43,11 @@ extension NSImage {
 
 
     func saveAsJpg(to url: URL) {
-        let options: [String: Any] = [NSImageCompressionFactor: 1.0]
+        let options: [NSBitmapImageRep.PropertyKey: Any] = [NSBitmapImageRep.PropertyKey.compressionFactor: 1.0]
         guard
             let imageData = tiffRepresentation,
             let bitmapImageRep = NSBitmapImageRep(data: imageData),
-            let data = bitmapImageRep.representation(using: .JPEG, properties: options)
+            let data = bitmapImageRep.representation(using: .jpeg, properties: options)
         else { return }
         try? data.write(to: url, options: [])
     }

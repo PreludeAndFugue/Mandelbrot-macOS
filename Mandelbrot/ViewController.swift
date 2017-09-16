@@ -52,7 +52,7 @@ class ViewController: NSViewController {
     @IBAction func save(_ sender: NSButton) {
         let savePanel = NSSavePanel()
         savePanel.nameFieldStringValue = "mandelbrot.jpg"
-        if savePanel.runModal() == NSFileHandlingPanelOKButton {
+        if savePanel.runModal() == .OK {
             guard let url = savePanel.url else { return }
             imageView.image?.saveAsJpg(to: url)
         }

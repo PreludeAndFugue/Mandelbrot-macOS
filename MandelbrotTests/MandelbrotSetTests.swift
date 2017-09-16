@@ -13,7 +13,7 @@ import XCTest
 class MandelbrotSetTests: XCTestCase {
 
     func testExample() {
-        let mandelbrotSet = MandelbrotSet(resolution: 5)
-        print(mandelbrotSet.grid)
+//        let mandelbrotSet = MandelbrotSet(resolution: 5)
+//        print(mandelbrotSet.grid)
     }
 }

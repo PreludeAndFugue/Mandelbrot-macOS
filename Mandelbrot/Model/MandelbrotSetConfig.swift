@@ -8,14 +8,23 @@
 
 struct MandelbrotSetConfig: CustomStringConvertible {
 
-    static let standard = MandelbrotSetConfig(imageWidth: 800, imageHeight: 800, width: 3, height: 3, centre: ComplexNumber(x: -0.5, y: 0), iterations: 300)
+    static let standard = MandelbrotSetConfig(
+        imageWidth: 800,
+        imageHeight: 800,
+        width: 3,
+        centre: ComplexNumber(x: -0.5, y: 0),
+        iterations: 300
+    )
 
     let imageWidth: Int
     let imageHeight: Int
     let width: Double
-    let height: Double
     let centre: ComplexNumber
     let iterations: Int
+
+    var height: Double {
+        return width * Double(imageHeight) / Double(imageWidth)
+    }
 
     var xMin: Double {
         return centre.x - width/2
@@ -53,7 +62,13 @@ struct MandelbrotSetConfig: CustomStringConvertible {
 
 
     func zoomIn(centre: ComplexNumber) -> MandelbrotSetConfig {
-        return MandelbrotSetConfig(imageWidth: imageWidth, imageHeight: imageHeight, width: width/2, height: height/2, centre: centre, iterations: Int(1.4*Double(iterations)))
+        return MandelbrotSetConfig(
+            imageWidth: imageWidth,
+            imageHeight: imageHeight,
+            width: width/2,
+            centre: centre,
+            iterations: Int(1.4*Double(iterations))
+        )
     }
 
 

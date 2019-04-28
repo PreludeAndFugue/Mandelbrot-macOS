@@ -39,7 +39,7 @@ struct MandelbrotSet {
         }
     }
 
-
+    /// The total number of iterations to compute the set.
     func gridIterations(config: MandelbrotSetConfig) -> Int {
         var total = 0
         for point in grid {
@@ -52,11 +52,13 @@ struct MandelbrotSet {
         }
         return total
     }
+}
 
 
-    // MARK:- Private
+// MARK:- Private
 
-    private func isInSet(point: ComplexNumber) -> MandelbrotSetPoint.Test {
+private extension MandelbrotSet {
+    func isInSet(point: ComplexNumber) -> MandelbrotSetPoint.Test {
         var z = point
         for i in 0 ..< iterations {
             if z.modulus() >= 4 {
@@ -69,7 +71,7 @@ struct MandelbrotSet {
 
 
     // Maybe this could be faster because not using operator overloading on the ComplexNumber struct
-    private func isInSetFast(point: ComplexNumber) -> MandelbrotSetPoint.Test {
+    func isInSetFast(point: ComplexNumber) -> MandelbrotSetPoint.Test {
         let (u, v) = (point.x, point.y)
         var (x, y) = (point.x, point.y)
         for i in 0 ..< iterations {

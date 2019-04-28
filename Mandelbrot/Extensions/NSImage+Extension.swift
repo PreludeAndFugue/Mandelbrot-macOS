@@ -22,8 +22,10 @@ extension NSImage {
 
         var data = pixels // Copy to mutable []
         guard
-            let providerRef = CGDataProvider(data: NSData(bytes: &data, length: data.count * MemoryLayout<Pixel>.size))
-        else { fatalError("no cg data provider") }
+            let provider = CGDataProvider(data: NSData(bytes: &data, length: data.count * MemoryLayout<Pixel>.size))
+        else {
+            fatalError("no cg data provider")
+        }
 
         guard let image = CGImage(
             width: width,
@@ -33,17 +35,19 @@ extension NSImage {
             bytesPerRow: width * MemoryLayout<Pixel>.size,
             space: rgbColorSpace,
             bitmapInfo: bitmapInfo,
-            provider: providerRef,
+            provider: provider,
             decode: nil,
             shouldInterpolate: true,
-            intent: CGColorRenderingIntent.defaultIntent
-        ) else { fatalError("Couldn't create CGImage") }
+            intent: .defaultIntent
+        ) else {
+            fatalError("Couldn't create CGImage")
+        }
         return NSImage(cgImage: image, size: NSZeroSize)
     }
 
 
     func saveAsJpg(to url: URL) {
-        let options: [NSBitmapImageRep.PropertyKey: Any] = [NSBitmapImageRep.PropertyKey.compressionFactor: 1.0]
+        let options: [NSBitmapImageRep.PropertyKey: Any] = [.compressionFactor: 1.0]
         guard
             let imageData = tiffRepresentation,
             let bitmapImageRep = NSBitmapImageRep(data: imageData),

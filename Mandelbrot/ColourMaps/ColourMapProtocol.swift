@@ -10,13 +10,13 @@ import CoreGraphics
 
 
 protocol ColourMapProtocol {
-
     typealias RGB = (r: UInt8, g: UInt8, b: UInt8)
 
     var blackPixel: Pixel { get }
     var pixels: [Pixel] { get }
     func pixel(from test: MandelbrotSetPoint.Test) -> Pixel
 }
+
 
 extension ColourMapProtocol {
     func pixel(from test: MandelbrotSetPoint.Test) -> Pixel {
@@ -47,5 +47,16 @@ extension ColourMapProtocol {
 
     static func diff(m: UInt8, n: UInt8) -> Double {
         return Double(m) - Double(n)
+    }
+
+
+    static var colourMaps: [ColourMapProtocol] {
+        [
+            GreyScale(numberOfGreys: 200),
+            YellowScale(numberOfYellows: 100),
+            SmoothScale(),
+            ManyColourGradient(n: 100, colours: (r: 255, g: 0, b: 0), (r: 255, g: 255, b: 0)),
+            ManyColourGradient(n: 70, colours: (r: 255, g: 0, b: 0), (r: 255, g: 255, b: 0), (r: 255, g: 255, b: 255))
+        ]
     }
 }

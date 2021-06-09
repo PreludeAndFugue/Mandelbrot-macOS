@@ -9,11 +9,11 @@
 struct MandelbrotSetConfig: CustomStringConvertible {
 
     static let standard = MandelbrotSetConfig(
-        imageWidth: 800,
-        imageHeight: 800,
+        imageWidth: 600,
+        imageHeight: 600,
         width: 3,
         centre: ComplexNumber(x: -0.5, y: 0),
-        iterations: 300
+        iterations: 150
     )
 
     let imageWidth: Int

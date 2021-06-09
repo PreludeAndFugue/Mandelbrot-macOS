@@ -44,6 +44,9 @@ struct Transformation {
 
 
     func transform(point: NSPoint) -> ComplexNumber {
-        return ComplexNumber(x: mx * Double(point.x) + cx, y: my * Double(point.y) + cy)
+        return ComplexNumber(
+            x: mx * Double(point.x) + cx,
+            y: my * Double(point.y) + cy
+        )
     }
 }

@@ -14,8 +14,16 @@ struct MainView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
+                Picker("Colours", selection: $viewModel.colourSelection) {
+                    ForEach(0..<viewModel.colourMaps.count) { i in
+                        Text(viewModel.colourMaps[i].title).tag(i)
+                    }
+                }
+                .pickerStyle(MenuPickerStyle())
+                .labelsHidden()
+                
                 Button(action: viewModel.draw) {
-                    Text("Draw")
+                    Text("Redraw")
                 }
 
                 Button(action: viewModel.reset) {
@@ -25,16 +33,6 @@ struct MainView: View {
                 Button(action: viewModel.save) {
                     Text("Save")
                 }
-
-                Picker("Colours", selection: $viewModel.colourSelection) {
-                    Text("c 1").tag(1)
-                    Text("c 2").tag(2)
-                    Text("c 3").tag(3)
-                    Text("c 4").tag(4)
-                    Text("c 5").tag(5)
-                }
-                .pickerStyle(MenuPickerStyle())
-                .labelsHidden()
 
                 Spacer()
 
@@ -63,6 +61,9 @@ struct MainView: View {
             }
         }
         .padding()
+        .onAppear() {
+            viewModel.onAppear()
+        }
     }
 
 

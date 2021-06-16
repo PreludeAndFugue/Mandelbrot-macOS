@@ -8,10 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E0598A8267AB62A0027242B /* MandelbrotEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 4E0598A7267AB62A0027242B /* MandelbrotEngine */; };
-		4E0762AD1EB4E97400D646FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0762AC1EB4E97400D646FE /* AppDelegate.swift */; };
-		4E0762AF1EB4E97400D646FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0762AE1EB4E97400D646FE /* ViewController.swift */; };
 		4E0762B11EB4E97400D646FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E0762B01EB4E97400D646FE /* Assets.xcassets */; };
-		4E0762B41EB4E97500D646FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E0762B21EB4E97500D646FE /* Main.storyboard */; };
 		4E0762CE1EB4FDC800D646FE /* MandelbrotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0762CD1EB4FDC800D646FE /* MandelbrotTests.swift */; };
 		4E0762D61EB4FDDC00D646FE /* LinearTransformationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0762D51EB4FDDC00D646FE /* LinearTransformationTests.swift */; };
 		4E0762D81EB504C600D646FE /* MandelbrotSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0762D71EB504C600D646FE /* MandelbrotSetTests.swift */; };
@@ -34,10 +31,7 @@
 
 /* Begin PBXFileReference section */
 		4E0762A91EB4E97400D646FE /* Mandelbrot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mandelbrot.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E0762AC1EB4E97400D646FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4E0762AE1EB4E97400D646FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4E0762B01EB4E97400D646FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4E0762B31EB4E97500D646FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4E0762B51EB4E97500D646FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E0762CB1EB4FDC800D646FE /* MandelbrotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MandelbrotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E0762CD1EB4FDC800D646FE /* MandelbrotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MandelbrotTests.swift; sourceTree = "<group>"; };
@@ -93,11 +87,8 @@
 			children = (
 				4E69397526715653004B3BB2 /* MainView */,
 				4EC9EBAC1EBBF5CC00AA333E /* Extensions */,
-				4E0762AC1EB4E97400D646FE /* AppDelegate.swift */,
-				4E0762AE1EB4E97400D646FE /* ViewController.swift */,
 				4E693971267149D4004B3BB2 /* MandelbrotApp.swift */,
 				4E0762B01EB4E97400D646FE /* Assets.xcassets */,
-				4E0762B21EB4E97500D646FE /* Main.storyboard */,
 				4E0762B51EB4E97500D646FE /* Info.plist */,
 			);
 			path = Mandelbrot;
@@ -226,7 +217,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E0762B11EB4E97400D646FE /* Assets.xcassets in Resources */,
-				4E0762B41EB4E97500D646FE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,10 +235,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E693974267149F1004B3BB2 /* MainView.swift in Sources */,
-				4E0762AF1EB4E97400D646FE /* ViewController.swift in Sources */,
 				4EC9EBAE1EBBF66F00AA333E /* NSImage+Extension.swift in Sources */,
 				4E693972267149D4004B3BB2 /* MandelbrotApp.swift in Sources */,
-				4E0762AD1EB4E97400D646FE /* AppDelegate.swift in Sources */,
 				4E69397726715664004B3BB2 /* MainViewModel.swift in Sources */,
 				4EC9EBAB1EBBF57400AA333E /* NSPoint+Extension.swift in Sources */,
 			);
@@ -273,17 +261,6 @@
 			targetProxy = 4E0762D01EB4FDC800D646FE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		4E0762B21EB4E97500D646FE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4E0762B31EB4E97500D646FE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4E0762B61EB4E97500D646FE /* Debug */ = {

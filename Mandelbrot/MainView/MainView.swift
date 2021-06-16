@@ -46,12 +46,21 @@ struct MainView: View {
             }
             .frame(minWidth: 100)
 
-            Image(nsImage: viewModel.image)
-                .resizable()
-                .frame(width: 600, height: 600)
-                .background(Color.black)
-                .cornerRadius(8)
-                .gesture(makeGesture())
+            ZStack {
+                Image(nsImage: viewModel.image)
+                    .resizable()
+                    .frame(width: 600, height: 600)
+                    .background(Color.black)
+                    .cornerRadius(8)
+                    .gesture(makeGesture())
+
+                ProgressView(viewModel.progress)
+                    .frame(width: 250)
+                    .padding()
+                    .background(Color.init(.sRGB, white: 1, opacity: 0.15))
+                    .cornerRadius(8)
+                    .opacity(viewModel.isInProgress ? 1 : 0)
+            }
         }
         .padding()
     }

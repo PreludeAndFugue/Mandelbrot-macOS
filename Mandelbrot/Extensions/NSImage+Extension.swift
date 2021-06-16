@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import MandelbrotEngine
 
 extension NSImage {
 
@@ -43,6 +44,16 @@ extension NSImage {
             fatalError("Couldn't create CGImage")
         }
         return NSImage(cgImage: image, size: NSZeroSize)
+    }
+
+
+    static func from(mandelbrotSet: MandelbrotSet, colourMap: ColourMapProtocol) -> NSImage {
+        let pixels = mandelbrotSet.grid.map({ colourMap.pixel(from: $0.test) })
+        return from(
+            pixels: pixels,
+            width: mandelbrotSet.imageSize.width,
+            height: mandelbrotSet.imageSize.height
+        )
     }
 
 

@@ -9,11 +9,16 @@
 import Cocoa
 import Combine
 
+import MandelbrotEngine
+
 class MainViewModel: ObservableObject {
     @Published var image = NSImage(size: .init(width: 600, height: 600))
+    @Published var progress = Progress(totalUnitCount: 100)
+    @Published var isInProgress = false
     @Published var colourSelection = 1
 
-    private var config = MandelbrotSetConfig.standard
+    private var config = MandelbrotSetConfig(imageWidth: 600, imageHeight: 600)
+    private var colourMap = ColourMapFactory.maps[0]
 
 
     func draw() {
@@ -37,7 +42,7 @@ class MainViewModel: ObservableObject {
 
 
     func reset() {
-        config = .standard
+        config = MandelbrotSetConfig(imageWidth: 600, imageHeight: 600)
         makeSet()
     }
 
@@ -52,15 +57,15 @@ class MainViewModel: ObservableObject {
 
 private extension MainViewModel {
     func makeSet() {
-        print("colour selection", colourSelection)
-        let mandelbrotSet = MandelbrotSet(config: config)
-        let colourMap = GreyScale(numberOfGreys: 200)
-
-        let pixels = mandelbrotSet.grid.map({ colourMap.pixel(from: $0.test) })
-        image = NSImage.from(
-            pixels: pixels,
-            width: mandelbrotSet.imageSize.width,
-            height: mandelbrotSet.imageSize.height
-        )
+        progress = Progress(totalUnitCount: 100)
+        isInProgress = true
+        DispatchQueue.global().async {
+            let mandelbrotSet = MandelbrotSet(config: self.config, progress: self.progress)
+            print(mandelbrotSet.imageSize)
+            DispatchQueue.main.async {
+                self.image = NSImage.from(mandelbrotSet: mandelbrotSet, colourMap: self.colourMap)
+                self.isInProgress = false
+            }
+        }
     }
 }

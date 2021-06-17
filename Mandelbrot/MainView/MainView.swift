@@ -47,7 +47,8 @@ struct MainView: View {
             ZStack {
                 Image(nsImage: viewModel.image)
                     .resizable()
-                    .frame(width: 600, height: 600)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: viewModel.viewWidth, height: viewModel.viewHeight)
                     .background(Color.black)
                     .cornerRadius(8)
                     .gesture(makeGesture())

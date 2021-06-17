@@ -12,14 +12,21 @@ import Combine
 import MandelbrotEngine
 
 class MainViewModel: ObservableObject {
-    @Published var image = NSImage(size: .init(width: 600, height: 600))
+    private let internalWidth = 1200
+    private let internalHeight = 1200
+    let viewWidth: CGFloat = 600
+    let viewHeight: CGFloat = 600
+
+    @Published var image = NSImage(size: NSSize(width: 0, height: 0))
     @Published var progress = Progress(totalUnitCount: 100)
     @Published var isInProgress = false
     @Published var colourSelection = 1
 
     var colourMaps = ColourMapFactory.maps
 
-    private var config = MandelbrotSetConfig(imageWidth: 600, imageHeight: 600)
+    private lazy var config = {
+        MandelbrotSetConfig(imageWidth: internalWidth, imageHeight: internalHeight)
+    }()
     private var mandelbrotSet: MandelbrotSet?
 
 
@@ -39,14 +46,18 @@ class MainViewModel: ObservableObject {
         )
         let complexRect = Rectangle(config: config)
         let transform = Transformation(from: imageRect, to: complexRect)
-        let newCentre = transform.transform(point: location)
+        let scaleX = CGFloat(internalWidth) / CGFloat(viewWidth)
+        let scaleY = CGFloat(internalHeight) / CGFloat(viewHeight)
+        let affineT = CGAffineTransform(scaleX: scaleX, y: scaleY)
+        let scaledLocation = location.applying(affineT)
+        let newCentre = transform.transform(point: scaledLocation)
         config = config.zoomIn(centre: newCentre)
         makeSet()
     }
 
 
     func reset() {
-        config = MandelbrotSetConfig(imageWidth: 600, imageHeight: 600)
+        config = MandelbrotSetConfig(imageWidth: internalWidth, imageHeight: internalHeight)
         makeSet()
     }
 
@@ -75,6 +86,7 @@ private extension MainViewModel {
                 let colourMap = self.colourMaps[self.colourSelection]
                 self.image = NSImage.from(mandelbrotSet: mandelbrotSet, colourMap: colourMap)
                 self.isInProgress = false
+                print(self.image.size)
             }
         }
     }

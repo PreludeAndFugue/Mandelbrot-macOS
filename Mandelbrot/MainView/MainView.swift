@@ -55,7 +55,7 @@ struct MainView: View {
                 ProgressView(viewModel.progress)
                     .frame(width: 250)
                     .padding()
-                    .background(Color.init(.sRGB, white: 1, opacity: 0.15))
+                    .background(Color.init(.sRGB, white: 0, opacity: 0.25))
                     .cornerRadius(8)
                     .opacity(viewModel.isInProgress ? 1 : 0)
             }

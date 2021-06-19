@@ -19,6 +19,7 @@ struct MainView: View {
                         Text(viewModel.colourMaps[i].title).tag(i)
                     }
                 }
+                .onChange(of: viewModel.colourSelection, perform: { _ in viewModel.draw() })
                 .pickerStyle(MenuPickerStyle())
                 .labelsHidden()
                 

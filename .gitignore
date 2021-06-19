@@ -24,3 +24,5 @@ DerivedData/
 
 ## Gcc Patch
 /*.gcno
+*.xcuserstate
+Mandelbrot.xcodeproj/project.xcworkspace/xcuserdata/gary.xcuserdatad/UserInterfaceState.xcuserstate

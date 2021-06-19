@@ -16,7 +16,11 @@ struct MainView: View {
             VStack(alignment: .leading) {
                 Picker("Colours", selection: $viewModel.colourSelection) {
                     ForEach(0..<viewModel.colourMaps.count) { i in
-                        Text(viewModel.colourMaps[i].title).tag(i)
+                        HStack {
+                            viewModel.previewImage(for: viewModel.colourMaps[i])
+                            Text(viewModel.colourMaps[i].title)
+                        }
+                        .tag(i)
                     }
                 }
                 .onChange(of: viewModel.colourSelection, perform: { _ in viewModel.draw() })

@@ -66,4 +66,27 @@ extension NSImage {
         else { return }
         try? data.write(to: url, options: [])
     }
+
+
+    /// Resizes an image.
+    ///
+    /// https://stackoverflow.com/a/30422317/132767
+    ///
+    /// - Parameter to: The new size.
+    /// - Returns: Resized image.
+    func resized(to: CGSize) -> NSImage {
+        let img = NSImage(size: to)
+        img.lockFocus()
+        if let ctx = NSGraphicsContext.current {
+            ctx.imageInterpolation = .high
+            draw(
+                in: NSRect(origin: .zero, size: to),
+                from: NSRect(origin: .zero, size: size),
+                operation: .copy,
+                fraction: 1
+            )
+        }
+        img.unlockFocus()
+        return img
+    }
 }

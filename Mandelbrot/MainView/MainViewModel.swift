@@ -8,6 +8,8 @@
 
 import Cocoa
 import Combine
+import Foundation
+import SwiftUI
 
 import MandelbrotEngine
 
@@ -73,6 +75,26 @@ class MainViewModel: ObservableObject {
 
     func onAppear() {
         makeSet()
+    }
+
+
+    /// Creates the preview image for the colour map picker
+    ///
+    /// Note I have to resize the NSImage rather than use the Image
+    /// view modifiers in the view because the `resizable` and
+    /// `aspectRatio` methods don't seem to change the size of the
+    /// image when contained in a `frame`.
+    ///
+    /// - Parameter map: The colour map.
+    /// - Returns: The preview image.
+    func previewImage(for map: ColourMapProtocol) -> Image {
+        let width = Int(sqrt(Double(map.preview.count)))
+        if width == 0 {
+            return Image(systemName: "questionmark.square.fill")
+        }
+        let nsImage = NSImage.from(pixels: map.preview, width: width, height: width)
+            .resized(to: CGSize(width: 16, height: 16))
+        return Image(nsImage: nsImage)
     }
 }
 

@@ -54,11 +54,12 @@ struct MainView: View {
                     .gesture(makeGesture())
 
                 ProgressView(viewModel.progress)
-                    .frame(width: 250)
+                    .frame(width: 250, height: 5)
                     .padding()
-                    .background(Color.init(.sRGB, white: 0, opacity: 0.25))
+                    .background(Color.init(.sRGB, white: 1, opacity: 0.25))
                     .cornerRadius(8)
                     .opacity(viewModel.isInProgress ? 1 : 0)
+                    .progressViewStyle(MyProgressViewStyle())
             }
         }
         .padding()

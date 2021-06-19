@@ -12,6 +12,7 @@
 		4E0762CE1EB4FDC800D646FE /* MandelbrotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0762CD1EB4FDC800D646FE /* MandelbrotTests.swift */; };
 		4E0762D61EB4FDDC00D646FE /* LinearTransformationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0762D51EB4FDDC00D646FE /* LinearTransformationTests.swift */; };
 		4E0762D81EB504C600D646FE /* MandelbrotSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0762D71EB504C600D646FE /* MandelbrotSetTests.swift */; };
+		4E51BEC8267E61D300A94C6C /* MyProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E51BEC7267E61D300A94C6C /* MyProgressViewStyle.swift */; };
 		4E693972267149D4004B3BB2 /* MandelbrotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E693971267149D4004B3BB2 /* MandelbrotApp.swift */; };
 		4E693974267149F1004B3BB2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E693973267149F1004B3BB2 /* MainView.swift */; };
 		4E69397726715664004B3BB2 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E69397626715664004B3BB2 /* MainViewModel.swift */; };
@@ -38,6 +39,7 @@
 		4E0762CF1EB4FDC800D646FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E0762D51EB4FDDC00D646FE /* LinearTransformationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearTransformationTests.swift; sourceTree = "<group>"; };
 		4E0762D71EB504C600D646FE /* MandelbrotSetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MandelbrotSetTests.swift; sourceTree = "<group>"; };
+		4E51BEC7267E61D300A94C6C /* MyProgressViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProgressViewStyle.swift; sourceTree = "<group>"; };
 		4E693971267149D4004B3BB2 /* MandelbrotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MandelbrotApp.swift; sourceTree = "<group>"; };
 		4E693973267149F1004B3BB2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		4E69397626715664004B3BB2 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				4E69397526715653004B3BB2 /* MainView */,
 				4EC9EBAC1EBBF5CC00AA333E /* Extensions */,
 				4E693971267149D4004B3BB2 /* MandelbrotApp.swift */,
+				4E51BEC7267E61D300A94C6C /* MyProgressViewStyle.swift */,
 				4E0762B01EB4E97400D646FE /* Assets.xcassets */,
 				4E0762B51EB4E97500D646FE /* Info.plist */,
 			);
@@ -237,6 +240,7 @@
 				4E693974267149F1004B3BB2 /* MainView.swift in Sources */,
 				4EC9EBAE1EBBF66F00AA333E /* NSImage+Extension.swift in Sources */,
 				4E693972267149D4004B3BB2 /* MandelbrotApp.swift in Sources */,
+				4E51BEC8267E61D300A94C6C /* MyProgressViewStyle.swift in Sources */,
 				4E69397726715664004B3BB2 /* MainViewModel.swift in Sources */,
 				4EC9EBAB1EBBF57400AA333E /* NSPoint+Extension.swift in Sources */,
 			);

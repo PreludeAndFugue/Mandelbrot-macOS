@@ -12,6 +12,19 @@ import MandelbrotEngine
 extension NSImage {
 
     // http://blog.human-friendly.com/drawing-images-from-pixel-data-in-swift
+
+
+
+    /// Creates an NSImage from `Pixel`s.
+    ///
+    /// Note that the image size (width * height) should be the same as
+    /// the number of pixels.
+    ///
+    /// - Parameters:
+    ///   - pixels: The Pixels.
+    ///   - width: The image width.
+    ///   - height: The image height.
+    /// - Returns: The image.
     static func from(pixels: [Pixel], width: Int, height: Int) -> NSImage {
         let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
         let bitmapInfo: CGBitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedFirst.rawValue)
@@ -47,6 +60,12 @@ extension NSImage {
     }
 
 
+    /// Creates an NSImage from a `MandelbrotSet` and a `ColourMap`.
+    ///
+    /// - Parameters:
+    ///   - mandelbrotSet: The Mandelbrot set.
+    ///   - colourMap: The colour map.
+    /// - Returns: The image.
     static func from(mandelbrotSet: MandelbrotSet, colourMap: ColourMapProtocol) -> NSImage {
         let pixels = mandelbrotSet.grid.map({ colourMap.pixel(from: $0.test) })
         return from(
@@ -54,17 +73,6 @@ extension NSImage {
             width: mandelbrotSet.imageSize.width,
             height: mandelbrotSet.imageSize.height
         )
-    }
-
-
-    func saveAsJpg(to url: URL) {
-        let options: [NSBitmapImageRep.PropertyKey: Any] = [.compressionFactor: 1.0]
-        guard
-            let imageData = tiffRepresentation,
-            let bitmapImageRep = NSBitmapImageRep(data: imageData),
-            let data = bitmapImageRep.representation(using: .jpeg, properties: options)
-        else { return }
-        try? data.write(to: url, options: [])
     }
 
 

@@ -67,6 +67,13 @@ struct MainView: View {
         .onAppear() {
             viewModel.onAppear()
         }
+        .fileExporter(
+            isPresented: $viewModel.isSaving,
+            document: viewModel.imageFile,
+            contentType: .jpeg,
+            defaultFilename: "mandelbrot.jpg",
+            onCompletion: { _ in }
+        )
     }
 
 

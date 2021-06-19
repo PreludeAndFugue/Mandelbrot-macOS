@@ -18,8 +18,11 @@ class MainViewModel: ObservableObject {
     let viewHeight: CGFloat = 600
 
     @Published var image = NSImage(size: NSSize(width: 0, height: 0))
+    @Published var imageFile = MandelbrotImage(image: NSImage(size: .zero))
+
     @Published var progress = Progress(totalUnitCount: 100)
     @Published var isInProgress = false
+    @Published var isSaving = false
     @Published var colourSelection = 1
 
     var colourMaps = ColourMapFactory.maps
@@ -34,6 +37,7 @@ class MainViewModel: ObservableObject {
         guard let set = mandelbrotSet else { return }
         let colourMap = colourMaps[colourSelection]
         image = NSImage.from(mandelbrotSet: set, colourMap: colourMap)
+        imageFile = MandelbrotImage(image: image)
     }
 
 
@@ -63,7 +67,7 @@ class MainViewModel: ObservableObject {
 
 
     func save() {
-        print("save")
+        isSaving = true
     }
 
 
@@ -85,6 +89,7 @@ private extension MainViewModel {
             DispatchQueue.main.async {
                 let colourMap = self.colourMaps[self.colourSelection]
                 self.image = NSImage.from(mandelbrotSet: mandelbrotSet, colourMap: colourMap)
+                self.imageFile = MandelbrotImage(image: self.image)
                 self.isInProgress = false
                 print(self.image.size)
             }

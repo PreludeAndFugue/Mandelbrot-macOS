@@ -10,15 +10,12 @@ import Cocoa
 import MandelbrotEngine
 
 extension NSImage {
-
-    // http://blog.human-friendly.com/drawing-images-from-pixel-data-in-swift
-
-
-
     /// Creates an NSImage from `Pixel`s.
     ///
     /// Note that the image size (width * height) should be the same as
     /// the number of pixels.
+    ///
+    /// http://blog.human-friendly.com/drawing-images-from-pixel-data-in-swift
     ///
     /// - Parameters:
     ///   - pixels: The Pixels.

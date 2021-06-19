@@ -26,10 +26,6 @@ struct MainView: View {
                 .onChange(of: viewModel.colourSelection, perform: { _ in viewModel.draw() })
                 .pickerStyle(MenuPickerStyle())
                 .labelsHidden()
-                
-                Button(action: viewModel.draw) {
-                    Text("Redraw")
-                }
 
                 Button(action: viewModel.reset) {
                     Text("Reset")

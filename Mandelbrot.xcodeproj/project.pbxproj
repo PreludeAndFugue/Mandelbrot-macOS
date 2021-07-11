@@ -18,6 +18,7 @@
 		4E693974267149F1004B3BB2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E693973267149F1004B3BB2 /* MainView.swift */; };
 		4E69397726715664004B3BB2 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E69397626715664004B3BB2 /* MainViewModel.swift */; };
 		4E71A159269B30290015664D /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E71A158269B30290015664D /* Formatter.swift */; };
+		4E71A15C269B37300015664D /* SideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E71A15B269B37300015664D /* SideView.swift */; };
 		4EC9EBAB1EBBF57400AA333E /* NSPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC9EBAA1EBBF57400AA333E /* NSPoint+Extension.swift */; };
 		4EC9EBAE1EBBF66F00AA333E /* NSImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC9EBAD1EBBF66F00AA333E /* NSImage+Extension.swift */; };
 /* End PBXBuildFile section */
@@ -47,6 +48,7 @@
 		4E693973267149F1004B3BB2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		4E69397626715664004B3BB2 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		4E71A158269B30290015664D /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		4E71A15B269B37300015664D /* SideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideView.swift; sourceTree = "<group>"; };
 		4EC9EBAA1EBBF57400AA333E /* NSPoint+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSPoint+Extension.swift"; sourceTree = "<group>"; };
 		4EC9EBAD1EBBF66F00AA333E /* NSImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImage+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				4E69397526715653004B3BB2 /* MainView */,
+				4E71A15A269B37220015664D /* SideView */,
 				4EC9EBAC1EBBF5CC00AA333E /* Extensions */,
 				4E693971267149D4004B3BB2 /* MandelbrotApp.swift */,
 				4E51BEC9267E6D3400A94C6C /* MandelbrotImage.swift */,
@@ -121,6 +124,14 @@
 				4E69397626715664004B3BB2 /* MainViewModel.swift */,
 			);
 			path = MainView;
+			sourceTree = "<group>";
+		};
+		4E71A15A269B37220015664D /* SideView */ = {
+			isa = PBXGroup;
+			children = (
+				4E71A15B269B37300015664D /* SideView.swift */,
+			);
+			path = SideView;
 			sourceTree = "<group>";
 		};
 		4EC9EBAC1EBBF5CC00AA333E /* Extensions */ = {
@@ -246,6 +257,7 @@
 				4E51BECA267E6D3400A94C6C /* MandelbrotImage.swift in Sources */,
 				4E693974267149F1004B3BB2 /* MainView.swift in Sources */,
 				4EC9EBAE1EBBF66F00AA333E /* NSImage+Extension.swift in Sources */,
+				4E71A15C269B37300015664D /* SideView.swift in Sources */,
 				4E693972267149D4004B3BB2 /* MandelbrotApp.swift in Sources */,
 				4E51BEC8267E61D300A94C6C /* MyProgressViewStyle.swift in Sources */,
 				4E69397726715664004B3BB2 /* MainViewModel.swift in Sources */,

@@ -13,35 +13,8 @@ struct MainView: View {
 
     var body: some View {
         HStack {
-            VStack(alignment: .leading) {
-                Picker("Colours", selection: $viewModel.colourSelection) {
-                    ForEach(0..<viewModel.colourMaps.count) { i in
-                        HStack {
-                            viewModel.previewImage(for: viewModel.colourMaps[i])
-                            Text(viewModel.colourMaps[i].title)
-                        }
-                        .tag(i)
-                    }
-                }
-                .onChange(of: viewModel.colourSelection, perform: { _ in viewModel.draw() })
-                .pickerStyle(MenuPickerStyle())
-                .labelsHidden()
-
-                Button(action: viewModel.reset) {
-                    Text("Reset")
-                }
-
-                Button(action: viewModel.save) {
-                    Text("Save")
-                }
-
-                Spacer()
-
-                Text("Max iterations: \(viewModel.iterations)")
-                Text("Total iterations: \(viewModel.totalIterations)")
-                Text("Render time: \(viewModel.renderTime)")
-            }
-            .frame(minWidth: 100)
+            SideView(model: viewModel)
+                .frame(minWidth: 100)
 
             ZStack {
                 Image(nsImage: viewModel.image)
@@ -73,9 +46,13 @@ struct MainView: View {
             onCompletion: { _ in }
         )
     }
+}
 
 
-    func makeGesture() -> _EndedGesture<DragGesture> {
+// MARK: - Private
+
+private extension MainView {
+    private func makeGesture() -> _EndedGesture<DragGesture> {
         let gesture = DragGesture(minimumDistance: 0, coordinateSpace: .local)
         let x = gesture.onEnded() { value in
             viewModel.select(location: value.location)

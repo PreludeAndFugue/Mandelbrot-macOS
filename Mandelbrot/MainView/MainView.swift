@@ -45,6 +45,7 @@ struct MainView: View {
             defaultFilename: "mandelbrot.jpg",
             onCompletion: { _ in }
         )
+        .navigationTitle(viewModel.title)
     }
 }
 

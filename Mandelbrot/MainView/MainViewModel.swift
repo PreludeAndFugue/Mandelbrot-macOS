@@ -39,6 +39,12 @@ class MainViewModel: ObservableObject {
     private var mandelbrotSet: MandelbrotSet?
 
 
+    var title: String {
+        let identifier = (Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String) ?? "0.0"
+        return "Mandelbrot \(identifier)"
+    }
+
+
     var iterations: Int {
         config.iterations
     }

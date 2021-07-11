@@ -14,6 +14,8 @@ import SwiftUI
 import MandelbrotEngine
 
 class MainViewModel: ObservableObject {
+    private let formatter = Formatter()
+
     private let internalWidth = 1200
     private let internalHeight = 1200
     let viewWidth: CGFloat = 600
@@ -28,11 +30,18 @@ class MainViewModel: ObservableObject {
     @Published var colourSelection = 1
 
     var colourMaps = ColourMapFactory.maps
+    var renderTime: String = "0"
+    var totalIterations: String = "0"
 
     private lazy var config = {
         MandelbrotSetConfig(imageWidth: internalWidth, imageHeight: internalHeight)
     }()
     private var mandelbrotSet: MandelbrotSet?
+
+
+    var iterations: Int {
+        config.iterations
+    }
 
 
     func draw() {
@@ -106,15 +115,28 @@ private extension MainViewModel {
         progress = Progress(totalUnitCount: 100)
         isInProgress = true
         DispatchQueue.global().async {
-            let mandelbrotSet = MandelbrotSet(config: self.config, progress: self.progress)
+            let mandelbrotSet = MandelbrotSet(
+                config: self.config,
+                progress: self.progress,
+                timer: self.timer(t:)
+            )
             self.mandelbrotSet = mandelbrotSet
             DispatchQueue.main.async {
                 let colourMap = self.colourMaps[self.colourSelection]
                 self.image = NSImage.from(mandelbrotSet: mandelbrotSet, colourMap: colourMap)
                 self.imageFile = MandelbrotImage(image: self.image)
+                self.totalIterations = self.formatter.format(
+                    iterations: mandelbrotSet.gridIterations(config: self.config)
+                )
                 self.isInProgress = false
-                print(self.image.size)
             }
+        }
+    }
+
+
+    private func timer(t: TimeInterval) {
+        DispatchQueue.main.async {
+            self.renderTime = self.formatter.format(renderTime: t)
         }
     }
 }

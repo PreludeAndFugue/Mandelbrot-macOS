@@ -17,6 +17,7 @@
 		4E693972267149D4004B3BB2 /* MandelbrotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E693971267149D4004B3BB2 /* MandelbrotApp.swift */; };
 		4E693974267149F1004B3BB2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E693973267149F1004B3BB2 /* MainView.swift */; };
 		4E69397726715664004B3BB2 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E69397626715664004B3BB2 /* MainViewModel.swift */; };
+		4E71A159269B30290015664D /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E71A158269B30290015664D /* Formatter.swift */; };
 		4EC9EBAB1EBBF57400AA333E /* NSPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC9EBAA1EBBF57400AA333E /* NSPoint+Extension.swift */; };
 		4EC9EBAE1EBBF66F00AA333E /* NSImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC9EBAD1EBBF66F00AA333E /* NSImage+Extension.swift */; };
 /* End PBXBuildFile section */
@@ -45,6 +46,7 @@
 		4E693971267149D4004B3BB2 /* MandelbrotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MandelbrotApp.swift; sourceTree = "<group>"; };
 		4E693973267149F1004B3BB2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		4E69397626715664004B3BB2 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		4E71A158269B30290015664D /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		4EC9EBAA1EBBF57400AA333E /* NSPoint+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSPoint+Extension.swift"; sourceTree = "<group>"; };
 		4EC9EBAD1EBBF66F00AA333E /* NSImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImage+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +98,7 @@
 				4E51BEC7267E61D300A94C6C /* MyProgressViewStyle.swift */,
 				4E0762B01EB4E97400D646FE /* Assets.xcassets */,
 				4E0762B51EB4E97500D646FE /* Info.plist */,
+				4E71A158269B30290015664D /* Formatter.swift */,
 			);
 			path = Mandelbrot;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				4E693972267149D4004B3BB2 /* MandelbrotApp.swift in Sources */,
 				4E51BEC8267E61D300A94C6C /* MyProgressViewStyle.swift in Sources */,
 				4E69397726715664004B3BB2 /* MainViewModel.swift in Sources */,
+				4E71A159269B30290015664D /* Formatter.swift in Sources */,
 				4EC9EBAB1EBBF57400AA333E /* NSPoint+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,7 +506,7 @@
 			repositoryURL = "https://github.com/PreludeAndFugue/MandelbrotEngine";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.10.0;
+				minimumVersion = 0.13.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

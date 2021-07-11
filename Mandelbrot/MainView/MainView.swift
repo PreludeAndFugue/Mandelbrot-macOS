@@ -37,11 +37,9 @@ struct MainView: View {
 
                 Spacer()
 
-                Text("dx: 1")
-
-                Text("dy: 2")
-
-                Text("iterations: 1000")
+                Text("Max iterations: \(viewModel.iterations)")
+                Text("Total iterations: \(viewModel.totalIterations)")
+                Text("Render time: \(viewModel.renderTime)")
             }
             .frame(minWidth: 100)
 

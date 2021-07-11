@@ -36,9 +36,28 @@ struct SideView: View {
 
             Spacer()
 
-            Text("Max iterations: \(model.iterations)")
-            Text("Total iterations: \(model.totalIterations)")
-            Text("Render time: \(model.renderTime)")
+            VStack(alignment: .leading, spacing: 10) {
+                VStack(alignment: .leading) {
+                    Text("Max iterations")
+                        .font(.callout)
+                        .foregroundColor(.secondary)
+                    Text("\(model.iterations)")
+                }
+
+                VStack(alignment: .leading) {
+                    Text("Total iterations")
+                        .font(.callout)
+                        .foregroundColor(.secondary)
+                    Text(model.totalIterations)
+                }
+
+                VStack(alignment: .leading) {
+                    Text("Render time")
+                        .font(.callout)
+                        .foregroundColor(.secondary)
+                    Text(model.renderTime)
+                }
+            }
         }
     }
 }

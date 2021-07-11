@@ -518,7 +518,7 @@
 			repositoryURL = "https://github.com/PreludeAndFugue/MandelbrotEngine";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.13.0;
+				minimumVersion = 0.14.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

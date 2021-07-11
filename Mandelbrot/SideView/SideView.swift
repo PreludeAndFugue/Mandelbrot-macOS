@@ -17,6 +17,7 @@ struct SideView: View {
                 ForEach(0..<model.colourMaps.count) { i in
                     HStack {
                         model.previewImage(for: model.colourMaps[i])
+                            .cornerRadius(2)
                         Text(model.colourMaps[i].title)
                     }
                     .tag(i)
@@ -25,6 +26,11 @@ struct SideView: View {
             .onChange(of: model.colourSelection, perform: { _ in model.draw() })
             .pickerStyle(MenuPickerStyle())
             .labelsHidden()
+
+            model.previewImage(for: model.colourMaps[model.colourSelection])
+                .resizable()
+                .frame(height: 20)
+                .cornerRadius(4)
 
             Button(action: model.reset) {
                 Text("Reset")
